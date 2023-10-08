@@ -7,9 +7,7 @@ import { Client, Databases } from "appwrite";
 const Projects = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const image = [
-   
-  ];
+
 
   const [images, setImages] = React.useState([]);
 
@@ -49,12 +47,11 @@ const Projects = () => {
       <h1 className="text-[48px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
         Our Products
       </h1>
-      <div className="flex gap-3 imagesContainer overflow-y-auto py-4 relative top-[30%]">
+      <div className="flex overflow-x-auto gap-3 py-2 max-h-[400px]">
         {images?.map((item, index) => (
-          
-            <div key={item.$id}>
+          <div key={index} className="w-[500px] h-[300px]">
               <img
-                className="border-[#fa9db7] pImg border-[3px] p-2 w-1/4 cursor-pointer rounded-[10px]"
+                className="border-[#fa9db7] pImg border-[3px] p-2 flex-1 cursor-pointer rounded-[10px] object-contain w-full h-full"
                 src={item.imageUrl}
                 onClick={() => openImageViewer(index)}
                 width="300"
@@ -62,8 +59,12 @@ const Projects = () => {
                 style={{ margin: "2px" }}
                 alt=""
               />
-            </div>
+      </div>
             ))}
+    
+       
+      </div>
+
             <div>
               {isViewerOpen && (
                 <div className="images absolute top-[30%]">
@@ -77,9 +78,6 @@ const Projects = () => {
                 </div>
               )}
             </div>
-         
-       
-      </div>
       <div className="flex mt-8 overflow-y-auto">
         <video
           className="w-[400px]"
