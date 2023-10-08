@@ -3,8 +3,8 @@ import { Account, Client } from "appwrite";
 const client = new Client();
 
 client
-  .setEndpoint(import.meta.env.VITE_PUBLIC_APPWRITE_URL)
-  .setProject("6523220178358b98db04");
+    .setEndpoint('http://24.199.118.182/v1')
+    .setProject('65232faeba7d1b1c508c');
 
 export const account = new Account(client);
 
