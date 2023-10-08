@@ -4,7 +4,7 @@ const client = new Client();
 
 client
   .setEndpoint(import.meta.env.VITE_PUBLIC_APPWRITE_URL)
-  .setProject(import.meta.env.VITE_PUBLIC_APPWRITE_PROJECT_ID);
+  .setProject("6523220178358b98db04");
 
 export const account = new Account(client);
 
