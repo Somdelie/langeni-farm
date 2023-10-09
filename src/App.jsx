@@ -16,11 +16,11 @@ function App() {
     <div className="w-full h-auto bg-bodyColor text-lightText">
   
         <Navbar />
-        <Banner />
-        <About />
+        {/* <Banner /> */}
+        {/* <About /> */}
       <div className="  max-w-screen-xl mx-auto">
 
-        <Projects />
+        {/* <Projects /> */}
       </div>
         <Resume />
         <Testimonial />
