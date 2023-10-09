@@ -1,7 +1,6 @@
 import Banner from "./components/banner/Banner";
 import Contact from "./components/contact/Contact";
 import About from "./components/features/About";
-
 import Projects from "./components/projects/Projects";
 import FooterBottom from "./components/footer/FooterBottom";
 import Navbar from "./components/navbar/Navbar";
@@ -16,11 +15,11 @@ function App() {
     <div className="w-full h-auto bg-bodyColor text-lightText">
   
         <Navbar />
-        {/* <Banner /> */}
-        {/* <About /> */}
+        <Banner />
+        <About />
       <div className="  max-w-screen-xl mx-auto">
 
-        {/* <Projects /> */}
+        <Projects />
       </div>
         <Resume />
         <Testimonial />
