@@ -60,7 +60,7 @@ registerUser(userInfo)
         // onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <div className="flex justify-between items-center p-5 ">
+        <div className="flex justify-between gap-3 items-center p-5 ">
           <span className=" text-2xl font-bold  text-[#141518]">
             Sign in to your account
           </span>
@@ -74,7 +74,7 @@ registerUser(userInfo)
             <form
               onSubmit={handleSubmit}
               ref={registerForm}
-              className="mt-8 w-[500px]"
+              className="mt-8 "
             >
               <div className="space-y-5">
                 <div>

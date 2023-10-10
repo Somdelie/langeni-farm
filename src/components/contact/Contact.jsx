@@ -55,6 +55,7 @@ const Contact = () => {
       setEmail("");
       setSubject("");
       setMessage("");
+      setPhone("");
       console.log(userMessage);
     }
   };

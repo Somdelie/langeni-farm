@@ -4,6 +4,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { account } from "../appwrite/config";
 import { ToastContainer, toast } from "react-toastify";
 import { ID } from "appwrite";
+import Loader from "./context/Loader";
+
 
 const AuthContext = createContext();
 
@@ -26,9 +28,9 @@ export const AuthProvider = ({ children }) => {
       let accountDetails = await account.get();
 
       toast.success("Login Successfully!");
-      console.log("accountDetails:", accountDetails);
+      // console.log("accountDetails:", accountDetails);
       setUser(accountDetails);
-      console.log(response)
+      // console.log(response)
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -65,9 +67,11 @@ export const AuthProvider = ({ children }) => {
       console.log(error);
       return toast.error(error.message);
     }
+    setLoading(false);
   };
 
   const checkUserStatus = async () => {
+    setLoading(true);
     try {
       let accountDetails = await account.get();
       setUser(accountDetails);
@@ -88,7 +92,7 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={contextData}>
       <ToastContainer />
-      {loading ? <p>Loading....</p> : children}
+      {loading ?   <Loader/> : children}
       
     </AuthContext.Provider>
   );
