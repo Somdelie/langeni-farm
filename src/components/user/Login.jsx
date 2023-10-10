@@ -73,7 +73,7 @@ export default function Login() {
         <Divider/>
         <DialogContent>
         <>
-        <form ref={loginForm} onSubmit={handleSubmit} className="mt-8 w-[500px]">
+        <form ref={loginForm} onSubmit={handleSubmit} className="mt-8">
             <div className="space-y-5">
 
               <div>
