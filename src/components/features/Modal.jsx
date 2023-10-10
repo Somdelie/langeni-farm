@@ -2,13 +2,14 @@
 import * as React from "react";
 import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import { Divider } from "@mui/material";
 import { Client, Databases } from "appwrite";
-
+import { MdLocationOn } from "react-icons/md";
+import EmailIcon from '@mui/icons-material/Email';
+import { FiPhoneCall } from "react-icons/fi";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -48,7 +49,7 @@ export default function Modal() {
     <div>
       <button
         onClick={handleClickOpen}
-        className="bg-[#ffc85b] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 w-1/3 py-4 rounded-[40px] text-white hover:bg-blue-500 relative btn2"
+        className="bg-[#ffc85b] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 px-8 py-4 rounded-[40px] text-white hover:bg-blue-500 relative btn2"
       >
         Read More
       </button>
@@ -58,16 +59,20 @@ export default function Modal() {
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <AppBar sx={{ backgroundColor: "gray", position: "fixed" }}>
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <h3 className="text tracking-[.5rem]">
+        <AppBar sx={{ backgroundColor: "gray", position: "fixed", width: '100%', padding:2 }}>
+       
+        
+           <div className="aboutUs-container1">
+         
+             <h3 className="text tracking-[.5rem]">
               LANGENI <span className="text-[#fa9db7]">FARMING</span>
             </h3>
-            <div className="flex items-center gap-4 ">
-              <span className="text-[24px]">get in touch ||</span>
-              <p>email@gmail.com</p>
-              <p>0727077541</p>
-              <p>57 jolex road kew jhb</p>
+      
+          
+            <div className="flex items-center justify-center gap-4 aboutUs text-[20px]">
+              <p className='flex items-center gap-1'><EmailIcon />email@gmail.com</p>
+              <p className='flex items-center gap-1'><FiPhoneCall/>0727077541</p>
+              <p className='flex items-center gap-1'><MdLocationOn/>57 jolex road kew jhb</p>
             </div>
             <IconButton
               edge="start"
@@ -76,14 +81,51 @@ export default function Modal() {
               aria-label="close"
               sx={{
                 backgroundColor: "#fa9db7",
+                width: '40px',
+                height: '40px',
+                 marginRight: '20px',
+                 marginTop: '10px',
                 "&:hover": {
                   backgroundColor: "#141518",
+                 
                 },
               }}
             >
               <CloseIcon />
             </IconButton>
-          </Toolbar>
+            </div>
+           <div className="aboutUs-container">
+           <div className="top flex items-center justify-between">
+             <h3 className="text tracking-[.5rem]">
+              LANGENI <span className="text-[#fa9db7] mr-4">FARMING</span>
+            </h3>
+           <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+              sx={{
+                backgroundColor: "#fa9db7",
+                 marginRight: '20px',
+                 marginTop: '10px',
+                "&:hover": {
+                  backgroundColor: "#141518",
+                 
+                },
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+           </div>
+          
+            <div className="flex items-center w-full gap-4 aboutUs text-sm">
+              <p>email@gmail.com</p>
+              <p>0727077541</p>
+              <p>57 jolex road kew jhb</p>
+            </div>
+        
+            </div>
+  
         </AppBar>
         <div className="py-[9rem]">
           {about?.map((item) => (
@@ -91,15 +133,15 @@ export default function Modal() {
               <h4 className="text-center text-[28px] mb-4">{item.heading}</h4>
 
               <Divider />
-              <div className="px-20 mt-6">
-                <p className="paragraph ">
+              <div className="aboutDiv mt-6">
+                <p className="paragraph aboutP">
                   <span className="text-[#fa9db7] text-[24px] font-bold">
                     Langeni Farm
                   </span>{" "}
                   {item.paragraph1}
                 </p>
 
-                <div className="flex items-center">
+                <div className="flex items-center flex-wrap">
                   <video
                     className="w-[400px]"
                     src={item.vedio}
@@ -111,9 +153,9 @@ export default function Modal() {
                     loop
                     muted
                   />
-                  <p className="paragraph font-[700]">{item.paragraph2}</p>
+                  <p className="paragraph aboutP font-[700]">{item.paragraph2}</p>
                 </div>
-                <p className="paragraph">{item.paragraph2}</p>
+                <p className="paragraph aboutP">{item.paragraph2}</p>
               </div>
             </div>
           ))}

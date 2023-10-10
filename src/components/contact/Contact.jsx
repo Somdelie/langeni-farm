@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuth } from "../../lib/AuthContext";
 
 // const user = {
 //   name: 'cautie',
@@ -14,7 +15,8 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const user = true;
+
+  const { user,  } = useAuth();
 
   const userMessage = {
     username,
@@ -67,12 +69,23 @@ const Contact = () => {
         CONTACT US
       </h1>
 
-      <div className="flex w-full items-center">
+      <div className="flex w-full items-center contactUs">
       <div className="flex-1 map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.314317516562!2d28.098627376135592!3d-26.121292677127737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d5d54425af1%3A0x5331da76173dc62f!2s50%20Jolex%20Rd%2C%20Bramley%20View%2C%20Johannesburg%2C%202090!5e0!3m2!1sen!2sza!4v1696304146333!5m2!1sen!2sza"
           width="650"
           height="680"
+          style={{ border: "0" }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+ </div>
+      <div className="flex-1 map1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.314317516562!2d28.098627376135592!3d-26.121292677127737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d5d54425af1%3A0x5331da76173dc62f!2s50%20Jolex%20Rd%2C%20Bramley%20View%2C%20Johannesburg%2C%202090!5e0!3m2!1sen!2sza!4v1696304146333!5m2!1sen!2sza"
+          width="350"
+          height="300"
           style={{ border: "0" }}
           allowfullscreen=""
           loading="lazy"

@@ -30,14 +30,14 @@ const Resume = () => {
         Our Projects
       </h1>
 
-      <div className="grid mt-[8rem] grid-cols-3 gap-4 max-w-screen-xl mx-auto">
+      <div className="grid mt-[8rem] gap-4 ourProducts ">
 
 {ourProducts?.map((item)=>(
-  <div className="flex gap-14 text-gray-600 p-[16px] card" key={item.id} >
-                <div className="item-image h-[100px] w-[250px]">
+  <div className="flex gap-14 text-gray-600 p-[16px] pcard" key={item.id} >
+                <div className="item-image flex-1">
                   <img src={item.imgUrl} className="w-full h-full" alt={item.title}/>
                 </div>
-                <div className="card-box">
+                <div className="card-box flex-1">
                     <h3 className="text-[#12265a] text-[28px]">
                       Lorem ipsum
                     </h3>
@@ -47,32 +47,7 @@ const Resume = () => {
             </div>
 ))}
            
-{/* 
-            <div className="flex gap-14 text-gray-600 p-[16px]">
-                <div className="item-image h-[100px] w-[250px]">
-                  <img src="https://th.bing.com/th/id/R.51e65b3ff440613c9e5bea2ec96be479?rik=TZmFx5hhsS7OOA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fspinach%2fspinach_PNG19.png&ehk=C2KXu1d8OW%2bBAtM22CTRMlJwdg%2b8gV0wsFAvHqm3WeI%3d&risl=&pid=ImgRaw&r=0" className="w-full h-full"/>
-                </div>
-                <div className="card-box">
-                    <h3 className="text-[#12265a] text-[28px]">
-                      Lorem ipsum
-                    </h3>
-                    <p className="paragraph2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elitdo </p>
-                </div>
-            </div>
 
-            <div className="flex gap-14 text-gray-600 p-[16px]">
-                <div className="item-image h-[100px] w-[250px]">
-                  <img src="https://myfamousmeats.com/wp-content/uploads/2021/07/LIve-450x450.png?x87150" className="w-full h-full"/>
-                </div>
-                <div className="card-box">
-                    <h3 className="text-[#12265a] text-[28px]">
-                      Lorem ipsum
-                    </h3>
-                    <p className="paragraph2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elitdo </p>
-                </div>
-            </div> */}
          
 
 
@@ -111,28 +86,28 @@ const Resume = () => {
       </svg>
       <div className="container-fluid">
         <div className="">
-          <div className="bg-[#88d4f2] flex gap-[10rem] items-center justify-center text-white text-[24px] h-[200px]">
-            <div className="card">
+          <div className="bg-[#88d4f2] content-fluid text-white text-[24px] h-[200px]">
+            <div className="fluid-card">
               <div className=" p-3">
                 <div className="card-text">
-                  <h3 className="count text-[48px]">
+                  <h5 className="count text-[48px]">
                     284
-                  </h3>
-                  <h5 className="text-[28px]">
+                  </h5>
+                  <span className="text-[28px]">
                     Months
-                  </h5>
+                  </span>
                 </div>
               </div>
             </div>
             <div className="card">
               <div className=" p-3">
                 <div className="card-text">
-                  <h3 className="count text-[48px]">
+                  <h5 className="count text-[48px]">
                     163
-                  </h3>
-                  <h5 className=" text-[28px]">
-                    Ideas
                   </h5>
+                  <span className=" text-[28px]">
+                    Ideas
+                  </span>
                 </div>
               </div>
             </div>
@@ -140,25 +115,25 @@ const Resume = () => {
             <div className="card">
               <div className=" p-3">
                 <div className="card-text">
-                  <h3 className="count text-[48px]">
+                  <h5 className="count text-[48px]">
                     853
-                  </h3>
-                  <h5 className="mbr-content-title mbr-bold mbr-fonts-style display-5 text-[28px]">
-                    Hours
                   </h5>
+                  <span className="text-[28px]">
+                    Hours
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="card">
               <div className=" p-3">
-                <div className="card-texts">
-                  <h3 className="count text-[48px]">
+                <div className="card-text">
+                  <h5 className="count text-[48px]">
                     734
-                  </h3>
-                  <h5 className=" text-[28px]">
-                    Programs
                   </h5>
+                  <span className=" text-[28px]">
+                    Programs
+                  </span>
                 </div>
               </div>
             </div>
