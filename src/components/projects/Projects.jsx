@@ -42,7 +42,7 @@ const Projects = () => {
       {vedios?.map((vedio) => (
         <video key={vedio.$id}
           className="w-[400px]"
-          src="https://res.cloudinary.com/cautious/video/upload/v1696333747/video_720p_1_ebuvfu.mp4"
+          src={vedio.vedio}
           autoPlay="true"
           width="600"
           height="300"
