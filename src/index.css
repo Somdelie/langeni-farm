@@ -24,6 +24,7 @@
 .nav {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   width: 100%;
+  gap: 8rem;
 }
 
 .active {
@@ -683,6 +684,10 @@ input,
   display: none;
 }
 
+.leftBanner{
+  padding: 0 28rem;
+}
+
 .map1{
   display: none;
 }
@@ -703,6 +708,29 @@ input,
 
 .aboutDiv{
   padding: 0px 20px;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .leftBanner{
+    padding: 0 18rem;
+    width: 100%;
+  }
+  .homeContent h1, h2{
+    font-size: 24px;
+  }
+  #home h1 {
+    font-size: 3rem;
+  }
+  .nav{
+    gap: 20px;
+    padding: 0 15px;
+  }
+    .ourProducts{
+    padding: 0 3rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -747,6 +775,11 @@ width: 100%;
 
   #home h1 {
     font-size: 3rem;
+  }
+
+   .leftBanner{
+    padding: 0 1rem;
+    width: 100%;
   }
 
   .aboutContent {
@@ -843,17 +876,65 @@ width: 100%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .text {
-    font-size: 14px;
+@media screen and (max-width: 834px) {
+  .text1 {
+    font-size: 16px;
     display: flex;
-    margin-left: 60px;
   }
 
   .navRight {
     display: none;
   }
+.homeContent{
+  padding: 0 0;
+}
+ 
+  .text3{
+    font-size: 2rem;
+  }
 
+  .text{
+    font-size: 14px;
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text1 {
+    font-size: 14px;
+    display: flex;
+  }
+
+  h1{
+    font-size: 1rem;
+  }
+
+    #home h1 {
+    font-size: 2rem;
+  }
+
+  .navRight {
+    display: none;
+  }
+.homeContent{
+  padding: 0 10px;
+}
+  #contact{
+    padding: 0 15px;
+  }
+
+  .text3{
+    font-size: 2rem;
+  }
+
+  .text{
+    font-size: 14px;
+    display: flex;
+  }
+}
+@media screen and (max-width:360px) {
+  #home h1 {
+    font-size: 2rem;
+  }
   
 }
 

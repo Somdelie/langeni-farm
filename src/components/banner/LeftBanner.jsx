@@ -18,7 +18,7 @@ const LeftBanner = () => {
       import.meta.env.VITE_PUBLIC_APPWRITE_BANNER_COLLECTION
     );
     setBanner(response.documents);
-    console.log(response.documents);
+    // console.log(response.documents);
   }
 
   React.useEffect(() => {
@@ -26,7 +26,7 @@ const LeftBanner = () => {
   }, []);
 
   return (
-    <div className="w-full gap-20b">
+    <div className="w-full homeContent">
       {banner?.map((item) => (
         <div className="flex flex-col gap-5" key={item.$id}>
           <h3 className="mb-4">

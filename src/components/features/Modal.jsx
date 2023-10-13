@@ -38,7 +38,7 @@ export default function Modal() {
       import.meta.env.VITE_PUBLIC_APPWRITE_ABOUT_COLLECTION
     );
     setAbout(response.documents);
-    console.log(response.documents);
+    // console.log(response.documents);
   }
 
   React.useEffect(() => {
@@ -64,9 +64,9 @@ export default function Modal() {
         
            <div className="aboutUs-container1">
          
-             <h3 className="text tracking-[.5rem]">
+             {/* <h3 className=" text3 tracking-[.5rem]">
               LANGENI <span className="text-[#fa9db7]">FARMING</span>
-            </h3>
+            </h3> */}
       
           
             <div className="flex items-center justify-center gap-4 aboutUs text-[20px]">

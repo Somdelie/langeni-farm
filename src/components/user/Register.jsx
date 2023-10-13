@@ -62,7 +62,7 @@ registerUser(userInfo)
       >
         <div className="flex justify-between gap-3 items-center p-5 ">
           <span className=" text-2xl font-bold  text-[#141518]">
-            Sign in to your account
+            Create new  account
           </span>
           <span className="bg-red-600 p-1 rounded-full cursor-pointer text-white shadow-lg">
             <Close onClick={handleClose} />

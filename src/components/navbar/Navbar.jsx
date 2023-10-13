@@ -14,14 +14,14 @@ const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="nav w-full h-[7rem] sticky top-0 z-[999] bg-bodyColor mx-auto flex gap-[8rem] justify-center items-center font-titleFont">
+    <div className="nav w-full h-[7rem] sticky top-0 z-[999] bg-bodyColor mx-auto flex  justify-center items-center font-titleFont">
       <div className="logo1">
-        <h3 className="text tracking-[.5rem] sm:text-[16px]">
+        <h3 className="text flex items-center tracking-[.5rem] sm:text-[16px]">
           LANGENI <span className="text-[#fa9db7]">FARMING</span>
         </h3>
       </div>
       <div>
-        <ul className=" mdl:inline-flex items-center gap-6 lg:gap-10 navLinks">
+        <ul className=" mdl:inline-flex items-center gap-6 lg:gap-6 navLinks">
           {navLinksdata.map(({ _id, title, link }) => (
             <li
               className="text-base  text-gray-700 text-[20px] tracking-wide cursor-pointer hover:text-designColor duration-300"
@@ -42,12 +42,12 @@ const Navbar = () => {
           ))}
         </ul>
        <div className="flex  px-5 gap-8 navbarSml">
-       <h5 className="text1 tracking-[.5rem] logo sm:text-[16px]">
+       <h5 className="text1 tracking-[.5rem] logo ">
           LANGENI <span className="text-[#fa9db7]">FARMING</span>
         </h5>
        <span
           onClick={() => setShowMenu(!showMenu)}
-          className="text-xl mdl:hidden bg-gray-800 text-white w-10 h-10 inline-flex items-center justify-center rounded-full cursor-pointer"
+          className="text-xl menuBtn mdl:hidden bg-gray-800 text-white w-10 h-10 inline-flex items-center justify-center rounded-full cursor-pointer"
         >
           <FiMenu />
         </span>

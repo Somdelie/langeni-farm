@@ -20,7 +20,7 @@ const About = () => {
       import.meta.env.VITE_PUBLIC_APPWRITE_ABOUT_COLLECTION
     );
     setAbout(response.documents);
-    console.log(response.documents);
+    // console.log(response.documents);
   }
 
   React.useEffect(() => {

@@ -34,7 +34,7 @@ const Banner = () => {
           key={item.$id}
         >
           <img src={item.background} />
-          <div className="sm:px-3 absolute top-[10rem] mdl:px-[28rem]">
+          <div className=" absolute top-[3rem] mdl:top-[10rem] leftBanner">
             <LeftBanner />
           </div>
           <svg

@@ -7,6 +7,7 @@ const Testimonial = () => {
   const [products, setProducts] = React.useState([]);
   const [productcard2, setProductCard2] = React.useState([]);
   const [productcard3, setProductCard3] = React.useState([]);
+  const [productcard4, setProductCard4] = React.useState([]);
 
   const client = new Client()
     .setEndpoint(import.meta.env.VITE_PUBLIC_APPWRITE_URL)
@@ -20,7 +21,7 @@ const Testimonial = () => {
       import.meta.env.VITE_PUBLIC_APPWRITE_PRODUCTS_CARD1_COLLECTION
     );
     setProducts(response.documents);
-    console.log(response.documents);
+   
   }
 
   React.useEffect(() => {
@@ -33,7 +34,7 @@ const Testimonial = () => {
       import.meta.env.VITE_PUBLIC_APPWRITE_PRODUCTS_CARD2_COLLECTION
     );
     setProductCard2(response.documents);
-    console.log(response.documents);
+   
   }
 
   React.useEffect(() => {
@@ -46,19 +47,33 @@ const Testimonial = () => {
       import.meta.env.VITE_PUBLIC_APPWRITE_PRODUCTS_CARD3_COLLECTION
     );
     setProductCard3(response.documents);
-    console.log(response.documents);
+
   }
 
   React.useEffect(() => {
     card3();
   }, []);
 
+  async function card4() {
+    const response = await databases.listDocuments(
+      import.meta.env.VITE_PUBLIC_APPWRITE_DATABASE,
+      import.meta.env.VITE_PUBLIC_APPWRITE_PRODUCTS_CARD4_COLLECTION
+    );
+    setProductCard4(response.documents);
+    
+  }
+
+  React.useEffect(() => {
+    card4();
+  }, []);
+
   return (
     <section className=" w-full pt-10  min-h-[60vh] relative" id="testemonials">
-   
-       <h1 className="text-[48px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
-      Our Products
+     {products?.map((card) =>(
+       <h1 className="mdl:text-[48px] text-[34px]  text-center  px-2 expText mb-10  mx-auto" key={card.$id}>
+       {card.heading2}
       </h1>
+      ))}
       <div className='relative w-full bg-[#f2f6ff] testemonials py-10 '>
 
       {products?.map((card) =>(
@@ -90,8 +105,8 @@ const Testimonial = () => {
    
  {productcard2?.map((card) => (
   <div className="flex justify-center left" key={card.$id}>
-        <div className=" flex items-center relative justify-end  right flex-1">
-          <div className="h-[100%] w-[12rem] rounded-full border-[#fa9db7] border-[3px] tImg">
+        <div className=" flex items-center relative justify-end  right flex-1 ">
+          <div className="h-[12rem] w-[12rem] rounded-full border-[#fa9db7] border-[3px] tImg">
             <img
               src={card.imageUrl}
               className="h-[100%] rounded-full "
@@ -141,10 +156,10 @@ const Testimonial = () => {
       </div>
       ))}
 
-      {productcard2?.map((card) => (
+      {productcard4?.map((card) => (
       <div className="flex justify-center left" key={card.$id}>
         <div className=" flex items-center relative justify-end  right flex-1">
-          <div className="h-[100%] w-[12rem] rounded-full border-[#fa9db7] border-[3px] tImg">
+          <div className="h-[12rem] w-[12rem] rounded-full border-[#fa9db7] border-[3px] tImg">
             <img
               src={card.imageUrl}
               className="h-[100%] rounded-full "
