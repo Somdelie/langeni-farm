@@ -69,8 +69,8 @@ const Contact = () => {
     toast.error("Please login to continue!");
   };
   return (
-    <section id="contact" className="w-full ">
-      <h1 className="text-[48px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
+    <section id="contact" className="w-full py-4">
+      <h1 className="mdl:text-[48px] text-[34px]  text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
         CONTACT US
       </h1>
 

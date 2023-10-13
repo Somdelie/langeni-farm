@@ -48,7 +48,7 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full py-20 relative min-h-[70vh]">
       {heading?.map((title) =>(
-        <h1 className="text-[48px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto" key={title.$id}>
+        <h1 className="mdl:text-[48px] text-[34px]  text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto" key={title.$id}>
         {title.title}
       </h1>
       ))}

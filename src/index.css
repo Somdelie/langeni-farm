@@ -919,7 +919,10 @@ width: 100%;
   padding: 0 10px;
 }
   #contact{
-    padding: 0 15px;
+    padding: 20px 15px;
+  }
+  #contact h1{
+    font-size: 28px;
   }
 
   .text3{
