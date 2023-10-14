@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <div className="nav w-full h-[7rem] sticky top-0 z-[999] bg-bodyColor mx-auto flex  justify-center items-center font-titleFont">
       <div className="logo1">
-        <h3 className="text flex items-center tracking-[.5rem] sm:text-[16px]">
-          LANGENI <span className="text-[#fa9db7]">FARMING</span>
+        <h3 className="text flex text-gray-400 items-center tracking-[.5rem] sm:text-[16px] mdl:text-[28px]">
+          LANGENI <span className="">FARMING</span>
         </h3>
       </div>
       <div>
@@ -42,8 +42,8 @@ const Navbar = () => {
           ))}
         </ul>
        <div className="flex  px-5 gap-8 navbarSml">
-       <h5 className="text1 tracking-[.5rem] logo ">
-          LANGENI <span className="text-[#fa9db7]">FARMING</span>
+       <h5 className="text1 tracking-[.5rem] logo text-[#188f00]">
+          LANGENI <span className="">FARMING</span>
         </h5>
        <span
           onClick={() => setShowMenu(!showMenu)}
@@ -56,8 +56,8 @@ const Navbar = () => {
           <div className="w-[75%] h-screen overflow-scroll absolute top-0 left-0 bg-gray-900 p-4 scrollbar-hide">
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
-                <h3 className="text-[24px] font-[800] text-[#12265a] tracking-[.5rem]">
-                  LANGENI <span className="text-green-600">FARMING</span>
+                <h3 className="text-[24px] font-[800] text-gray-300 tracking-[.5rem]">
+                  LANGENI <span className="">FARMING</span>
                 </h3>
     
               </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
             {user ? (
         <div className="flex items-center gap-2 ">
-        <button className="bg-[#141518] py-1 px-4 rounded-md flex items-center hover:bg-[#1a1b20] text-[#9ca3af] text-[18px]" onClick={logoutUser}><MdLogout/><span> Logout</span></button>
+        <button className="bg-[#188f00] py-1 px-4 rounded-md flex items-center text-[#9ca3af] text-[18px]" onClick={logoutUser}><MdLogout/><span> Logout</span></button>
         <div className="circle-wrapper ml-[40px]">
           <div className="success circle"></div>
           <div className="icon">
@@ -114,7 +114,7 @@ const Navbar = () => {
       </div>
       {user ? (
         <div className="flex items-center gap-2 navRight ">
-        <button className="bg-[#141518] py-1 px-4 rounded-md flex items-center hover:bg-[#1a1b20] text-[#9ca3af] text-[18px]" onClick={logoutUser}><MdLogout/><span> Logout</span></button>
+        <button className="bg-[#188f00] flex items-center gap-1 py-1 px-4 rounded-md hover:border-[#188f00] hover:bg-transparent border-2 hover:text-[#188f00] text-white text-[18px]" onClick={logoutUser}><MdLogout/><span> Logout</span></button>
         <div className="circle-wrapper ml-[40px]">
           <div className="success circle"></div>
           <div className="icon">

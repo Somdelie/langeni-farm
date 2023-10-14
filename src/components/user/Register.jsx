@@ -48,7 +48,7 @@ registerUser(userInfo)
     <div>
       <button
         onClick={handleClickOpen}
-        className="bg-[#141518] py-1 px-4 rounded-md hover:bg-[#1a1b20] text-[#9ca3af] text-[18px]"
+        className="bg-[#188f00] py-1 px-4 rounded-md hover:border-[#188f00] hover:bg-transparent border-2 hover:text-[#188f00] text-white text-[18px]"
       >
         Register
       </button>

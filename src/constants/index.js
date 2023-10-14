@@ -21,7 +21,7 @@ export const navLinksdata = [
   },
   {
     _id: 1006,
-    title: "TESTIMONIALS",
+    title: "BEST SELLERS",
     link: "testemonials",
   },
   {

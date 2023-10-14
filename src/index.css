@@ -85,8 +85,8 @@ body {
 }
 
 .success {
-  border: 3px dashed #fa9db7;
-  background-color: #fa9db7;
+  border: 3px dashed #188f00;
+  background-color: #188f00;
 }
 
 @keyframes spin {
@@ -165,7 +165,7 @@ h1 {
 }
 
 .active {
-  background-color: #fa9db7;
+  background-color: #188f00;
   /* padding: 5px 10px; */
   -o-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -184,7 +184,7 @@ h1 {
 }
 
 .about-container {
-  border: 3px dashed #fa9db7;
+  border: 3px dashed #188f00;
   -o-border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -193,7 +193,7 @@ h1 {
 }
 
 .card-text:hover .count{
-  color: #fa9db7;
+  color: #188f00;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -234,7 +234,7 @@ h1 {
 }
 
 .imagesContainer::-webkit-scrollbar-thumb {
-  background: #ffbace;
+  background: #188f00;
   width: 4px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -305,7 +305,7 @@ h1 {
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-top-color: #fa9db7;
+  border-top-color: #188f00;
 } */
 
 h2 {
@@ -350,7 +350,7 @@ textarea {
 }
 
 textarea:focus {
-  outline-color: #fa9db7;
+  outline-color: #188f00;
 }
 
 .btn-wrapper {
@@ -380,7 +380,7 @@ textarea:focus {
 }
 
 input:focus {
-  border: 3px solid #fa9db7;
+  border: 3px solid #188f00;
 }
 
 form p {
@@ -469,7 +469,8 @@ input,
 }
 
 #projects {
-  min-height: 75vh;
+  padding-top: 30px;
+  /* min-height: 75vh; */
 }
 
 #resume {
@@ -494,7 +495,7 @@ input,
   right: 49.96%;
   width: 4px;
   height: 100%;
-  background: #fa9db7;
+  background: #188f00;
 }
 
 .diamond1 {
@@ -504,7 +505,7 @@ input,
   left: auto;
   width: 18px;
   height: 18px;
-  background: #fa9db7;
+  background: #188f00;
   transform: rotate(45deg);
 }
 .diamond2 {
@@ -514,7 +515,7 @@ input,
   left: auto;
   width: 18px;
   height: 18px;
-  background: #fa9db7;
+  background: #188f00;
   transform: rotate(45deg);
 }
 
@@ -542,7 +543,7 @@ input,
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   padding: 8px;
-  border: 3px dashed #fa9db7;
+  border: 3px dashed #188f00;
 }
 
 #contact {
@@ -576,7 +577,7 @@ input,
 }
 
 .card:hover h3 {
-  color: #fa9db7;
+  color: #188f00;
 }
 
 .text {
@@ -587,9 +588,9 @@ input,
   /* transform: translate(70%, -10%); */
   text-transform: uppercase;
   font-family: verdana;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 700;
-  color: #141518;
+  color: #188f00;
   text-shadow: 1px 1px 1px #b8b8b8, 1px 2px 1px #919191, 1px 3px 1px #919191,
     1px 4px 1px #919191, 1px 5px 1px #c5c5c5, 1px 6px 1px #c0c0c0,
     /* 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, */ 1px
@@ -667,7 +668,7 @@ input,
   content: '';
   width: 5px;
   height: 100%;
-  background-color: #fa9db7;
+  background-color: #188f00;
   position: absolute;
   left: 0;
   top: 0;

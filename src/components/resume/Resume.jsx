@@ -1,5 +1,6 @@
 import React from "react";
 import { Client, Databases } from "appwrite";
+import { Divider } from "@mui/material";
 
 const Resume = () => {
   const [projects, setAbout] = React.useState([]);
@@ -24,14 +25,14 @@ const Resume = () => {
   }, []);
 
   return (
-    <section id="resume" className="w-full py-20 relative min-h-[70vh]">
+    <section id="resume" className="w-full relative py-[30px]">
       {projects?.map((project) => (
         <div key={project.$id}>
-          <h1 className="mdl:text-[48px] text-[34px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
+          <h1 className="mdl:text-[38px] text-[34px] text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
             {project.heading}
           </h1>
 
-          <div className="grid mt-[8rem] gap-4 ourProducts ">
+          <div className="grid gap-4 ourProducts ">
             <div className="flex gap-14 text-gray-600 p-[16px] pcard">
               <div className="item-image flex-1">
                 <img
@@ -41,7 +42,7 @@ const Resume = () => {
                 />
               </div>
               <div className="card-box flex-1">
-                <h3 className="text-[#12265a] mdl:text-[28px] text-[18px]">
+                <h3 className="text-gray-600 mdl:text-[28px] text-[18px]">
                   {project.subHeading}
                 </h3>
                 <p className="paragraph2 text-[16px]">{project.description}</p>
@@ -49,7 +50,7 @@ const Resume = () => {
             </div>
           </div>
 
-          <div className=" div mt-10">
+          {/* <div className=" div mt-10">
             <svg
               className="svg-2 bg-[#88d4f2]"
               xmlns="http://www.w3.org/2000/svg"
@@ -130,9 +131,10 @@ const Resume = () => {
                 transform="translate(83 -214.13)"
               ></path>
             </svg>
-          </div>
+          </div> */}
         </div>
       ))}
+      <Divider sx={{marginTop: '30px'}}/>
     </section>
   );
 };

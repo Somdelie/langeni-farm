@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../../lib/AuthContext";
 import { databasses } from "../../appwrite/config";
 import { ID } from "appwrite";
+import { Divider } from "@mui/material";
 
 
 
@@ -70,7 +71,8 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="w-full py-4">
-      <h1 className="mdl:text-[48px] text-[34px]  text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
+       <Divider sx={{marginBottom: '30px'}}/>
+      <h1 className="mdl:text-[38px] text-[34px]  text-center relative px-2 expText mb-10 max-w-screen-xl mx-auto">
         CONTACT US
       </h1>
 
@@ -79,7 +81,7 @@ const Contact = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.314317516562!2d28.098627376135592!3d-26.121292677127737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d5d54425af1%3A0x5331da76173dc62f!2s50%20Jolex%20Rd%2C%20Bramley%20View%2C%20Johannesburg%2C%202090!5e0!3m2!1sen!2sza!4v1696304146333!5m2!1sen!2sza"
             width="650"
-            height="680"
+            height="600"
             style={{ border: "0" }}
             allowFullScreen=""
             loading="lazy"

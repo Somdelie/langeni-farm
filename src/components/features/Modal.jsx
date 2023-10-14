@@ -8,7 +8,7 @@ import Slide from "@mui/material/Slide";
 import { Divider } from "@mui/material";
 import { Client, Databases } from "appwrite";
 import { MdLocationOn } from "react-icons/md";
-import EmailIcon from '@mui/icons-material/Email';
+import EmailIcon from "@mui/icons-material/Email";
 import { FiPhoneCall } from "react-icons/fi";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -49,7 +49,7 @@ export default function Modal() {
     <div>
       <button
         onClick={handleClickOpen}
-        className="bg-[#ffc85b] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 px-8 py-4 rounded-[40px] text-white hover:bg-blue-500 relative btn2"
+        className="bg-[#ffc85b] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 px-8 py-4 rounded-[40px] text-white hover:bg-[#188f00] relative btn2"
       >
         Read More
       </button>
@@ -59,73 +59,81 @@ export default function Modal() {
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <AppBar sx={{ backgroundColor: "gray", position: "fixed", width: '100%', padding:2 }}>
-       
-        
-           <div className="aboutUs-container1">
-         
-             {/* <h3 className=" text3 tracking-[.5rem]">
-              LANGENI <span className="text-[#fa9db7]">FARMING</span>
-            </h3> */}
-      
-          
-            <div className="flex items-center justify-center gap-4 aboutUs text-[20px]">
-              <p className='flex items-center gap-1'><EmailIcon />email@gmail.com</p>
-              <p className='flex items-center gap-1'><FiPhoneCall/>0727077541</p>
-              <p className='flex items-center gap-1'><MdLocationOn/>57 jolex road kew jhb</p>
+        <AppBar
+          sx={{
+            backgroundColor: "gray",
+            position: "fixed",
+            width: "100%",
+            padding: 2,
+          }}
+        >
+          {about?.map((item) => (
+            <div key={item.$id}>
+              <div className="aboutUs-container1">
+                <div className="flex items-center justify-center gap-4 aboutUs text-[20px]">
+                  <p className="flex items-center gap-1">
+                    <EmailIcon />
+                    {item.email}
+                  </p>
+                  <p className="flex items-center gap-1">
+                    <FiPhoneCall />
+                    {item.phone}
+                  </p>
+                  <p className="flex items-center gap-1">
+                    <MdLocationOn />
+                    {item.address}
+                  </p>
+                </div>
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  onClick={handleClose}
+                  aria-label="close"
+                  sx={{
+                    backgroundColor: "#fa9db7",
+                    width: "40px",
+                    height: "40px",
+                    marginRight: "20px",
+                    marginTop: "10px",
+                    "&:hover": {
+                      backgroundColor: "#141518",
+                    },
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </div>
+              <div className="aboutUs-container">
+                <div className="top flex items-center justify-between">
+                  <h3 className="text tracking-[.5rem] text-[#188f00]">
+                    LANGENI <span className=" mr-4">FARMING</span>
+                  </h3>
+                  <IconButton
+                    edge="start"
+                    color="inherit"
+                    onClick={handleClose}
+                    aria-label="close"
+                    sx={{
+                      backgroundColor: "#fa9db7",
+                      marginRight: "20px",
+                      marginTop: "10px",
+                      "&:hover": {
+                        backgroundColor: "#141518",
+                      },
+                    }}
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                </div>
+
+                <div className="flex items-center w-full gap-4 aboutUs text-sm">
+                  <p>{item.email}</p>
+                  <p>{item.phone}</p>
+                  <p>{item.address}</p>
+                </div>
+              </div>
             </div>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-              sx={{
-                backgroundColor: "#fa9db7",
-                width: '40px',
-                height: '40px',
-                 marginRight: '20px',
-                 marginTop: '10px',
-                "&:hover": {
-                  backgroundColor: "#141518",
-                 
-                },
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-            </div>
-           <div className="aboutUs-container">
-           <div className="top flex items-center justify-between">
-             <h3 className="text tracking-[.5rem]">
-              LANGENI <span className="text-[#fa9db7] mr-4">FARMING</span>
-            </h3>
-           <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-              sx={{
-                backgroundColor: "#fa9db7",
-                 marginRight: '20px',
-                 marginTop: '10px',
-                "&:hover": {
-                  backgroundColor: "#141518",
-                 
-                },
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-           </div>
-          
-            <div className="flex items-center w-full gap-4 aboutUs text-sm">
-              <p>email@gmail.com</p>
-              <p>0727077541</p>
-              <p>57 jolex road kew jhb</p>
-            </div>
-        
-            </div>
-  
+          ))}
         </AppBar>
         <div className="py-[9rem]">
           {about?.map((item) => (
@@ -135,7 +143,7 @@ export default function Modal() {
               <Divider />
               <div className="aboutDiv mt-6">
                 <p className="paragraph aboutP">
-                  <span className="text-[#fa9db7] text-[24px] font-bold">
+                  <span className="text-[#188f00] text-[24px] font-bold">
                     Langeni Farm
                   </span>{" "}
                   {item.paragraph1}
@@ -153,7 +161,9 @@ export default function Modal() {
                     loop
                     muted
                   />
-                  <p className="paragraph aboutP font-[700]">{item.paragraph2}</p>
+                  <p className="paragraph aboutP font-[700]">
+                    {item.paragraph2}
+                  </p>
                 </div>
                 <p className="paragraph aboutP">{item.paragraph2}</p>
               </div>
